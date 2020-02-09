@@ -7,22 +7,7 @@ class Pokemon
         @db = arg[:db]
     end
 
-    # def update  
-    #     sql = <<-SQL
-    #     UPDATE pokemon
-    #     SET 
-    #     name = ?,
-    #     type =?
-    #     WHERE id = ?
-    #     SQL
-
-    #     @db.execute(sql, self.name, self.type, self.id)
-    # end
-
     def self.save(name, type, db)
-        # if self.id 
-        # self.update
-        # else
         sql = <<-SQL
         INSERT INTO pokemon (name, type)
         VALUES (?,?)
